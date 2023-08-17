@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Carrinho;
 use App\Models\Genero;
 use App\Models\Filme;
 use Illuminate\Http\Request;
@@ -182,13 +181,6 @@ class FilmeController extends Controller
 
     public function deleteConfirmmovie(Filme $movie)
     {
-        // Verifica se há registros na tabela 'carrinhos' que referenciam o Filme
-        $hasRelatedCarts = Carrinho::where('filme_id', $movie->id)->exists();
-
-        if ($hasRelatedCarts) {
-            // Remove os registros do carrinho que referenciam o Filme
-            Carrinho::where('filme_id', $movie->id)->delete();
-        }
 
         if ($movie->imagem) {
             // Obtém o caminho completo da imagem no storage
