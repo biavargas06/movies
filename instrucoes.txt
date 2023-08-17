@@ -1,0 +1,21 @@
+Baixem o composer, se ja n tiverem né, tem no yt;
+
+Utilizem esse comando no terminal:
+
+| cd .\library\
+
+E depois esse:
+
+| composer install
+
+Para carregar as imagens do banco Utilizem esse comando:
+
+| php artisan storage:link
+
+Para começar um server e criar o banco de dados:
+
+| php artisan serve
+            
+| php artisan migrate
+
+Vai aparecer que vocês não tem uma chave gerada, só clicar em gerar chave.
